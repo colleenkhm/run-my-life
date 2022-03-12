@@ -40,7 +40,17 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
-    text-align: left;
+  }
+  
+  .hour-display {
+    border: border-box;
+    border-right:2px solid #000000;
+    display: left;
+    width: 10%;
+    margin: 0;
+    line-height: 300%;
+    padding: 0px 2px;
+    text-align: right;
   }
   
   .past {
