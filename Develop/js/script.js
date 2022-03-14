@@ -1,17 +1,46 @@
+const timeBlocks = document.getElementsByClassName("timeBlock");
+let currentHour = parseInt(moment().format("HH"));
+var timeBlockCounter = 8;
+
+var addTimeBlockId = function() {
+    timeBlock.setAttribute("timeBlock.id", timeBlockCounter);
+    timeBlockCounter++;
+};
+
+Array.from(timeBlocks).forEach(timeBlock => {
+    let
+        timeBlockIdString = timeBlock.id,
+        timeBlockHour;
+    if (timeBlockIdString) {
+        timeBlockHour = parseInt(timeBlockIdString);
+    }
+    if (timeBlockHour) {
+    //compares id to current hour and changes color
+        if (currentHour === timeBlockHour) {
+            timeBlock.classList.add("present");
+        } else if ((currentHour < timeBlockHour) && (currentHour > timeBlockHour -6)) {
+            timeBlock.classList.add("future");
+        } else if ((currentHour > timeBlockHour) && (currentHour < timeBlockHour + 6)) {
+            timeBlock.classList.add("future")
+        }
+    
+    }});
 //display current date and time
-//still need to figure out how to make the time increase - using moments.js should work but its not loading
-const now = new Date();
-var dateNoTime = (now.getMonth()+1)+'/'+now.getDate()+'/'+now.getFullYear();
-let displayDate = dateNoTime.toString();
-document.getElementById(currentDay);
+var displayDate = moment().format('dddd MMMM Do');
 currentDay.innerHTML = displayDate;
+
+// change color depending on whether event is in past, present, or future
+
+// save events to local storage
+
+
 
 // const now = moment().format('dddd')+moment().format('MMMM Do YYYY')
 // let displayDate = now.toString();
 // document.getElementById(currentDay)
 // currentDay.innerHTML = displayDate;
 
-// need to have number of hours as separate div or maybe undisplayed id that corresponds to time in format that javascript can read
+// need to have number of hours as separate div or maybe undisplayed id that corresponds to time in format that javascript can read (hourIdCounter?)
 // need to account for am vs pm
 // if/else statements that set current time = hour fetched from new date
 // if/else must also contain addClass="hidden" and removeClass "hidden" for past, present, and future CSS styles
@@ -20,8 +49,6 @@ currentDay.innerHTML = displayDate;
 // onclick function that enables text input for each field
 // refer to taskinator for adding events/saving in local storage
 // change color for past/future events (if/else if/else statements for past, present, and future)
-
-// create a table for the different times and events
 
 
 
