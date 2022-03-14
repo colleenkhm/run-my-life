@@ -4,12 +4,21 @@ currentDay.innerHTML = displayDate;
 
 const timeBlocks = document.getElementsByClassName("timeBlock");
 let currentHour = parseInt(moment().format("HH"));
-var timeBlockHour = 8;
 
-var addTimeBlockId = function() {
-    timeBlock.setAttribute("timeBlock.id", timeBlockCounter);
-    timeBlockCounter++;
-};
+var timeBlockArr = [timeBlocks]
+
+// change color depending on whether event is in past, present, or future
+ Array.from(timeBlockArr).forEach(timeBlock => {
+for (i = 0; i < timeBlockArr.length; i++) {
+    if ((timeBlockArr[i] + 8) < currentHour) {
+        element.classList.add("past");
+    } else if ((timeBlockArr[i] + 8) === currentHour) {
+        element.classList.add("present");
+    } else if ((timeBlockArr[i] + 8) > currentHour) {
+        element.classList.add("future");
+    }
+}});
+// change color depending on whether event is in past, present, or future
 
 Array.from(timeBlocks).forEach(timeBlock => {
     // still need to set timeBlock id equal to timeBlock - maybe I'm overcomplicating this and can do it in less code?
@@ -31,7 +40,6 @@ Array.from(timeBlocks).forEach(timeBlock => {
     
     }});
 
-// change color depending on whether event is in past, present, or future
 
 // save events to local storage
 
