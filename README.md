@@ -9,3 +9,7 @@ A website for users to easily save and view events during the day, with color-co
 * JavaScript
 
 ## Website
+https://colleenkhm.github.io/run-my-life/
+
+## Contributions
+Made by Colleen Murray
