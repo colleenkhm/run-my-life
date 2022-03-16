@@ -1,7 +1,7 @@
 # Work Day Scheduler
 
 ## Purpose
-A website for users to easily save and view events during the day, with color-coordination to display whether events have passed or are upcoming.
+A website for users to easily save and view events planned for their day, with color-coordination to display whether event times have passed or are upcoming.
 
 ## Built With
 * HTML
@@ -11,5 +11,5 @@ A website for users to easily save and view events during the day, with color-co
 ## Website
 https://colleenkhm.github.io/run-my-life/
 
-## Contributions
+## Contributors
 Made by Colleen Murray
