@@ -26,6 +26,12 @@ body {
     white-space: pre-wrap;
   }
 
+  .row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;
+  }
+
   .time-block {
     text-align: center;
     border-radius: 15px;
@@ -36,6 +42,7 @@ body {
   .hour {
     background-color: #ffffff;
     color: #000000;
+    border-top: 1px dashed #000000;
   }
   
   .hour-display {
