@@ -7,3 +7,5 @@ A website for the user to input and edit scheduled events for the day, with colo
 * HTML
 * CSS
 * JavaScript
+
+## Website
